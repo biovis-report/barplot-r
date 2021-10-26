@@ -1,8 +1,8 @@
 include LICENSE.txt
 include README.md
 include requirements.txt
-recursive-include bar_plot *
+recursive-include barplot *
 recursive-exclude * __pycache__
 recursive-exclude * *.pyc
 recursive-exclude * *.pyo
-recursive-exclude bar_plot.egg-info *
+recursive-exclude barplot.egg-info *

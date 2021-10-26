@@ -1,1 +1,1 @@
-mk-media-extension>=0.1.0
+biovis-media-extension>=0.1.0

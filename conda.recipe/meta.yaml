@@ -1,12 +1,8 @@
-# {% set data = load_setup_py_data() %}
-{% set version = '0.1.0' %}
-{% set url = 'https://choppy.3steps.cn/go-choppy/bar-plot-r-plugin/' %}
-{% set description = 'An choppy plugin to draw an interactive bar plot.' %}
-{% set long_description = 'The bar plot plugin will draw an interactive bar plot by using ggplot2 library.' %}
+{% set data = load_setup_py_data() %}
 
 package:
-  name: bar-plot-r-plugin
-  version: {{ version }}
+  name: barplot-r
+  version: {{ data.version }}
 
 
 source:
@@ -15,9 +11,6 @@ source:
 
 build:
   include_recipe: True
-  entry_points:
-    - bar-plot-r = bar_plot.bar_plot:BarPlotRPlugin
-
 
 requirements:
   build:
@@ -26,7 +19,6 @@ requirements:
 
   run:
     - python
-    - mk-media-extension>=0.1.0
     - r-dplyr
     - r-shiny
     - r-plotly
@@ -37,15 +29,15 @@ requirements:
 
 # test:
 #   imports:
-#     - bar_plot
+#     - barplot
 
 about:
-  home: {{ url }}
-  license: BSD 3-Clause
+  home: {{ data.url }}
+  license: MIT
   license_file: LICENSE.md
-  license_family: BSD
+  license_family: MIT
 
-  summary: {{ description }}
-  description: {{ long_description }}
+  summary: {{ data.description }}
+  description: {{ data.long_description }}
   doc_url: http://docs.3steps.cn
-  dev_url: {{ url }}
+  dev_url: {{ data.url }}

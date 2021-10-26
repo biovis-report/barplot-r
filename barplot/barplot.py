@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 import os
-from mk_media_extension.plugin import BasePlugin
+from biovis_media_extension.plugin import BasePlugin
 
 
 class BarPlotRPlugin(BasePlugin):

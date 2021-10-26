@@ -2,23 +2,20 @@
 # -*- coding:utf-8 -*-
 
 from setuptools import setup, find_packages
-from bar_plot.version import get_version
+from barplot.version import get_version
 
 setup(
-    name='bar-plot-r-plugin',
+    name='barplot-r',
     version=get_version(),
-    description='An choppy plugin to draw an interactive bar plot.',
-    long_description='The bar plot plugin will draw an interactive bar plot by using ggplot2 library.',
-    keywords='choppy, plugin, bar-plot, interactive',
-    url='https://choppy.3steps.cn/go-choppy/bar-plot-r-plugin/',
+    description='An biovis plugin to draw an interactive bar plot.',
+    long_description='The barplot plugin will draw an interactive bar plot by using ggplot2 library.',
+    keywords='biovis-plugin, barplot, interactive',
+    url='https://github.com/biovis-report/barplot-r',
     author='Jingcheng Yang',
     author_email='yjcyxky@163.com',
     license='MIT',
     python_requires='>=3.5',
     include_package_data=True,
-    install_requires=[
-        'mk-media-extension>=0.1.0'
-    ],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
@@ -32,8 +29,8 @@ setup(
     ],
     packages=find_packages(),
     entry_points={
-        'choppy.plugins': [
-            'bar-plot-r = bar_plot.bar_plot:BarPlotRPlugin'
+        'biovis.plugins': [
+            'barplot-r = barplot.barplot:BarPlotRPlugin'
         ]
     }
 )
