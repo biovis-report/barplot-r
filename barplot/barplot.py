@@ -7,7 +7,7 @@ from biovis_media_extension.plugin import BasePlugin
 
 class BarPlotRPlugin(BasePlugin):
     """
-    BarPlotRPlugin plugin for mk_media_extension.
+    BarPlotRPlugin plugin for biovis_media_extension.
 
     :Example:
     @bar-plot-r()
